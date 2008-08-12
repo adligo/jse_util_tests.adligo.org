@@ -17,16 +17,24 @@ public class TestLogLevels extends TestCase {
 	public void testLevels() {
 		assertTrue("System should be set to info",
 				infoLog.isInfoEnabled());
-		assertFalse("System should NOT be set to warn" + 
+		assertFalse("System should NOT be set to debug" + 
+				((SimpleLog) infoLog).getLevel(),
+				infoLog.isDebugEnabled());
+		assertTrue("System should be set to warn" + 
 				((SimpleLog) infoLog).getLevel(),
 				infoLog.isWarnEnabled());
 		assertTrue("TestLogLevels should be set to debug",
 				debugLog.isDebugEnabled());
-		assertFalse("TestLogLevels should NOT be set to info",
+		assertTrue("TestLogLevels should be set to info",
 				debugLog.isInfoEnabled());
+		assertFalse("TestLogLevels should NOT be set to trace",
+				debugLog.isTraceEnabled());
+		
 		assertTrue("Event should be set to warn",
 				warnLog.isWarnEnabled());
-		assertFalse("Event should NOT be set to Error",
+		assertTrue("Event should be set to Error",
 				warnLog.isErrorEnabled());
+		assertFalse("Event should NOT be set to Info",
+				warnLog.isInfoEnabled());
 	}
 }
