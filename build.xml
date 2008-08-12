@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project basedir="." default="jar" name="j2se_util">
+<project basedir="." default="test" name="j2se_util">
 	<property file="${user.home}/conf/adligo/user.properties"
 	          description="properties that tailor the build to your computer."/>
 	<property file="${user.home}/conf/adligo/adligo_lib.properties"/>
 	<property file="build.properties" />
 	
 	<import file="${user.home}/conf/adligo/build.xml"/>
+	
+	<target name="test" depends="jar" >
+		<java fork="true" classname="junit.textui.TestRunner"
+		        taskname="junit" failonerror="false" output="test_results" >
+		        <classpath>
+		          <pathelement path="${build_classpath}${me};" />
+		        </classpath>
+		        <arg value="org.adligo.j2se.util.TestLogLevels"/>
+		 </java>
+		
+	</target>
 </project>
