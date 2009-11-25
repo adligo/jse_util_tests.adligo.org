@@ -1,9 +1,12 @@
 package org.adligo.j2se.util;
 
+import java.io.File;
+
 import org.adligo.i.util.client.I_Event;
 import org.adligo.i.util.client.I_Listener;
 import org.adligo.i.util.client.I_Map;
 import org.adligo.i.util.client.PropertyFactory;
+import org.adligo.i.util.client.PropertyFileReadException;
 import org.adligo.i.util.mocks.MockPropertyFactory;
 
 
@@ -39,6 +42,14 @@ public class J2SEPropertyFactoryTests extends TestCase {
 		assertEquals("Error reading property file '/not_there.properties'  " +
 				"file system name 'null' file content; \n" +
 				"null", t.getMessage());
+		PropertyFileReadException pfre = (PropertyFileReadException) t;
+		assertEquals("/not_there.properties", pfre.getFileName());
+		File file = new File(".");
+		String absPath = file.getAbsolutePath();
+		assertNull(pfre.getAttemptedSystemFileName());
+		
+		
+		
 		assertNotNull(result.getValue());
 		I_Map map = (I_Map) result.getValue();
 		assertEquals(0, map.size());
