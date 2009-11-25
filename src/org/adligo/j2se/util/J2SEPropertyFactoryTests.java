@@ -7,6 +7,7 @@ import org.adligo.i.util.client.I_Listener;
 import org.adligo.i.util.client.I_Map;
 import org.adligo.i.util.client.PropertyFactory;
 import org.adligo.i.util.client.PropertyFileReadException;
+import org.adligo.i.util.mocks.MockMapFactory;
 import org.adligo.i.util.mocks.MockPropertyFactory;
 
 
@@ -17,7 +18,9 @@ public class J2SEPropertyFactoryTests extends TestCase {
 	
 	public void testInit() throws Exception {
 		MockPropertyFactory.uninit();
+		MockMapFactory.unInit();
 		
+		J2SEMapFactory.init();
 		J2SEPropertyFactory.init();
 		
 		Exception ex = null;
