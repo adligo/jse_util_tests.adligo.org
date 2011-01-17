@@ -1,4 +1,4 @@
-package org.adligo.j2se.util;
+package org.adligo.jse.util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,19 +6,20 @@ import java.util.List;
 import org.adligo.i.util.client.I_Iterator;
 import org.adligo.i.util.client.IteratorFactory;
 import org.adligo.i.util.mocks.MockIteratorFactory;
+import org.adligo.jse.util.JSEIteratorFactory;
 
 import junit.framework.TestCase;
 
-public class J2SEIteratorFactoryTests extends TestCase {
+public class JSEIteratorFactoryTests extends TestCase {
 
 	public void testInit() throws Exception {
 		MockIteratorFactory.uninit();
 		
-		J2SEIteratorFactory.init();
+		JSEIteratorFactory.init();
 		
 		Exception ex = null;
 		try {
-			J2SEIteratorFactory.init();
+			JSEIteratorFactory.init();
 		} catch (Exception x) {
 			ex = x;
 		}

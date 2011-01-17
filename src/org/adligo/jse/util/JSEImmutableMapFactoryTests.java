@@ -1,14 +1,17 @@
-package org.adligo.j2se.util;
+package org.adligo.jse.util;
 
 import java.util.HashMap;
 
 import org.adligo.i.util.client.I_ImmutableMap;
+import org.adligo.jse.util.JSEImmutableMapFactory;
+import org.adligo.jse.util.MapWrapper;
+
 import junit.framework.TestCase;
 
-public class J2SEImmutableMapFactoryTests extends TestCase {
+public class JSEImmutableMapFactoryTests extends TestCase {
 
 	public void testCalls() throws Exception {
-		J2SEImmutableMapFactory factory = new J2SEImmutableMapFactory();
+		JSEImmutableMapFactory factory = new JSEImmutableMapFactory();
 		I_ImmutableMap map = (I_ImmutableMap) factory.createNew(null);
 		assertNotNull(map);
 		assertEquals("{}", map.toString());

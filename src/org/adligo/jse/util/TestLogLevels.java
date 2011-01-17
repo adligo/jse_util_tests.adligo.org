@@ -1,10 +1,10 @@
-package org.adligo.j2se.util;
+package org.adligo.jse.util;
 
 import org.adligo.i.log.client.Log;
 import org.adligo.i.log.client.LogFactory;
 import org.adligo.i.log.client.SimpleLog;
 import org.adligo.i.util.client.Event;
-import org.adligo.j2se.util.init.Init;
+import org.adligo.jse.util.init.Init;
 
 import junit.framework.TestCase;
 

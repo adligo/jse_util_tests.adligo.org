@@ -1,4 +1,4 @@
-package org.adligo.j2se.util;
+package org.adligo.jse.util;
 
 import java.io.File;
 
@@ -9,23 +9,25 @@ import org.adligo.i.util.client.PropertyFactory;
 import org.adligo.i.util.client.PropertyFileReadException;
 import org.adligo.i.util.mocks.MockMapFactory;
 import org.adligo.i.util.mocks.MockPropertyFactory;
+import org.adligo.jse.util.JSEMapFactory;
+import org.adligo.jse.util.JSEPropertyFactory;
 
 
 import junit.framework.TestCase;
 
-public class J2SEPropertyFactoryTests extends TestCase {
+public class JSEPropertyFactoryTests extends TestCase {
 	I_Event result;
 	
 	public void testInit() throws Exception {
 		MockPropertyFactory.uninit();
 		MockMapFactory.unInit();
 		
-		J2SEMapFactory.init();
-		J2SEPropertyFactory.init();
+		JSEMapFactory.init();
+		JSEPropertyFactory.init();
 		
 		Exception ex = null;
 		try {
-			J2SEPropertyFactory.init();
+			JSEPropertyFactory.init();
 		} catch (Exception x) {
 			ex = x;
 		}

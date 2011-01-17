@@ -1,4 +1,4 @@
-package org.adligo.j2se.util;
+package org.adligo.jse.util;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -6,18 +6,19 @@ import java.util.HashSet;
 import org.adligo.i.util.client.CollectionFactory;
 import org.adligo.i.util.client.I_Collection;
 import org.adligo.i.util.mocks.MockCollectionFactory;
+import org.adligo.jse.util.JSECollectionFactory;
 
 import junit.framework.TestCase;
 
-public class J2SECollectionFactoryTests extends TestCase {
+public class JSECollectionFactoryTests extends TestCase {
 
 	public void testInit() throws Exception {
 		MockCollectionFactory.uninit();
-		J2SECollectionFactory.init();
+		JSECollectionFactory.init();
 		
 		Exception ex = null;
 		try {
-			J2SECollectionFactory.init();
+			JSECollectionFactory.init();
 		} catch (Exception x) {
 			ex = x;
 		}

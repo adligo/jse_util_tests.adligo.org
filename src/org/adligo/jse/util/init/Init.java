@@ -1,13 +1,13 @@
-package org.adligo.j2se.util.init;
+package org.adligo.jse.util.init;
 
 import org.adligo.i.log.client.LogPlatform;
-import org.adligo.j2se.util.J2SEPlatform;
+import org.adligo.jse.util.JSEPlatform;
 
 public class Init {
 	static {
 		try {
 			System.out.println("Entering static block");
-			J2SEPlatform.init();
+			JSEPlatform.init();
 			LogPlatform.init();
 			System.out.println("static block sucess");
 		} catch (Exception x) {
