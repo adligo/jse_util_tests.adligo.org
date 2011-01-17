@@ -74,7 +74,7 @@ public class JSEPropertyFactoryTests extends TestCase {
 		assertEquals(3, map.size());
 		
 		assertEquals("INFO", map.get("defaultlog"));
-		assertEquals("DEBUG", map.get("org.adligo.j2se.util.TestLogLevels"));
+		assertEquals("DEBUG", map.get("org.adligo.jse.util.TestLogLevels"));
 		assertEquals("WARN", map.get("org.adligo.i.util.client.Event"));
 	}
 }
