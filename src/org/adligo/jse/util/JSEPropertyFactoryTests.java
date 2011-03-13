@@ -1,6 +1,7 @@
 package org.adligo.jse.util;
 
 import java.io.File;
+import java.net.URL;
 
 import org.adligo.i.util.client.I_Event;
 import org.adligo.i.util.client.I_Listener;
@@ -59,6 +60,30 @@ public class JSEPropertyFactoryTests extends TestCase {
 		I_Map map = (I_Map) result.getValue();
 		assertEquals(0, map.size());
 		
+		URL url = JSEPropertyFactory.class.getResource("/adligo_log.properties");
+		String fileName = url.getFile();
+		System.out.println("loading from file " + fileName);
+		
+		//from file
+		result = null;
+		PropertyFactory.get(fileName, new I_Listener() {
+			public void onEvent(I_Event p) {
+				result = p;
+			}
+		});
+		
+		assertNotNull(result);
+		assertFalse(result.threwException());
+		assertNull(result.getException());
+		assertNotNull(result.getValue());
+		map = (I_Map) result.getValue();
+		assertEquals(3, map.size());
+		
+		assertEquals("INFO", map.get("defaultlog"));
+		assertEquals("DEBUG", map.get("org.adligo.jse.util.TestLogLevels"));
+		assertEquals("WARN", map.get("org.adligo.i.util.client.Event"));
+		
+		//from classpath
 		result = null;
 		PropertyFactory.get("/adligo_log.properties", new I_Listener() {
 			public void onEvent(I_Event p) {
