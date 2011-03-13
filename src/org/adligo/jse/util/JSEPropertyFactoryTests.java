@@ -1,6 +1,9 @@
 package org.adligo.jse.util;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.URL;
 
 import org.adligo.i.util.client.I_Event;
@@ -60,13 +63,22 @@ public class JSEPropertyFactoryTests extends TestCase {
 		I_Map map = (I_Map) result.getValue();
 		assertEquals(0, map.size());
 		
-		URL url = JSEPropertyFactory.class.getResource("/adligo_log.properties");
-		String fileName = url.getFile();
-		System.out.println("loading from file " + fileName);
+		InputStream is = JSEPropertyFactory.class.getResourceAsStream("/adligo_log.properties");
+		File systemFile = new File("./test_foo.properties");
+		systemFile.createNewFile();
+		OutputStream out = new FileOutputStream(systemFile);
+		byte [] bytes = new byte[1];
+		while (is.read(bytes) != -1) {
+			out.write(bytes);
+		}
+		is.close();
+		out.close();
+		String absFilePath = systemFile.getAbsolutePath();
+		System.out.println("loading from file " + absFilePath);
 		
 		//from file
 		result = null;
-		PropertyFactory.get(fileName, new I_Listener() {
+		PropertyFactory.get(absFilePath, new I_Listener() {
 			public void onEvent(I_Event p) {
 				result = p;
 			}
