@@ -3,4 +3,7 @@ bin/
 classes/
 test_failure.properties
 test_results/
+test_reports/
+test_foo.properties
+jse_util_test.jar
 
