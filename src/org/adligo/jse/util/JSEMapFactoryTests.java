@@ -3,7 +3,7 @@ package org.adligo.jse.util;
 import org.adligo.i.util.client.I_ImmutableMap;
 import org.adligo.i.util.client.I_Map;
 import org.adligo.i.util.client.MapFactory;
-import org.adligo.i.util.mocks.MockMapFactory;
+import org.adligo.i.util.tests.mocks.MockMapFactory;
 import org.adligo.jse.util.JSEMapFactory;
 
 import junit.framework.TestCase;

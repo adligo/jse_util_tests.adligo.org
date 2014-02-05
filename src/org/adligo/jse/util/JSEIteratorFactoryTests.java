@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.adligo.i.util.client.I_Iterator;
 import org.adligo.i.util.client.IteratorFactory;
-import org.adligo.i.util.mocks.MockIteratorFactory;
+import org.adligo.i.util.tests.mocks.MockIteratorFactory;
 import org.adligo.jse.util.JSEIteratorFactory;
 
 import junit.framework.TestCase;

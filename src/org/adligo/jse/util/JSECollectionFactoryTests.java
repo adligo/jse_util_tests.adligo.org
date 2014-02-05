@@ -5,7 +5,7 @@ import java.util.HashSet;
 
 import org.adligo.i.util.client.CollectionFactory;
 import org.adligo.i.util.client.I_Collection;
-import org.adligo.i.util.mocks.MockCollectionFactory;
+import org.adligo.i.util.tests.mocks.MockCollectionFactory;
 import org.adligo.jse.util.JSECollectionFactory;
 
 import junit.framework.TestCase;
