@@ -2,7 +2,7 @@ package org.adligo.jse.util;
 
 import java.util.HashMap;
 
-import org.adligo.i.util.client.I_ImmutableMap;
+import org.adligo.i.util.shared.I_ImmutableMap;
 import org.adligo.jse.util.JSEImmutableMapFactory;
 import org.adligo.jse.util.MapWrapper;
 

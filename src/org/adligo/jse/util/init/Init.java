@@ -1,6 +1,6 @@
 package org.adligo.jse.util.init;
 
-import org.adligo.i.log.client.LogPlatform;
+import org.adligo.i.log.shared.LogPlatform;
 import org.adligo.jse.util.JSEPlatform;
 
 public class Init {

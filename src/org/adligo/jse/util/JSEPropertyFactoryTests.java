@@ -6,13 +6,13 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
 
-import org.adligo.i.util.client.I_Event;
-import org.adligo.i.util.client.I_Listener;
-import org.adligo.i.util.client.I_Map;
-import org.adligo.i.util.client.PropertyFactory;
-import org.adligo.i.util.client.PropertyFileReadException;
-import org.adligo.i.util.tests.mocks.MockMapFactory;
-import org.adligo.i.util.tests.mocks.MockPropertyFactory;
+import org.adligo.i.util.shared.I_Event;
+import org.adligo.i.util.shared.I_Listener;
+import org.adligo.i.util.shared.I_Map;
+import org.adligo.i.util.shared.PropertyFactory;
+import org.adligo.i.util.shared.PropertyFileReadException;
+import org.adligo.i.util_tests.mocks.MockMapFactory;
+import org.adligo.i.util_tests.mocks.MockPropertyFactory;
 import org.adligo.jse.util.JSEMapFactory;
 import org.adligo.jse.util.JSEPropertyFactory;
 

@@ -3,9 +3,9 @@ package org.adligo.jse.util;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import org.adligo.i.util.client.CollectionFactory;
-import org.adligo.i.util.client.I_Collection;
-import org.adligo.i.util.tests.mocks.MockCollectionFactory;
+import org.adligo.i.util.shared.CollectionFactory;
+import org.adligo.i.util.shared.I_Collection;
+import org.adligo.i.util_tests.mocks.MockCollectionFactory;
 import org.adligo.jse.util.JSECollectionFactory;
 
 import junit.framework.TestCase;

@@ -3,9 +3,9 @@ package org.adligo.jse.util;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.adligo.i.util.client.I_Iterator;
-import org.adligo.i.util.client.IteratorFactory;
-import org.adligo.i.util.tests.mocks.MockIteratorFactory;
+import org.adligo.i.util.shared.I_Iterator;
+import org.adligo.i.util.shared.IteratorFactory;
+import org.adligo.i.util_tests.mocks.MockIteratorFactory;
 import org.adligo.jse.util.JSEIteratorFactory;
 
 import junit.framework.TestCase;

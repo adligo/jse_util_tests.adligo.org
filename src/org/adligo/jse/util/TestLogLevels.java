@@ -1,9 +1,9 @@
 package org.adligo.jse.util;
 
-import org.adligo.i.log.client.Log;
-import org.adligo.i.log.client.LogFactory;
-import org.adligo.i.log.client.SimpleLog;
-import org.adligo.i.util.client.Event;
+import org.adligo.i.log.shared.Log;
+import org.adligo.i.log.shared.LogFactory;
+import org.adligo.i.log.shared.SimpleLog;
+import org.adligo.i.util.shared.Event;
 import org.adligo.jse.util.init.Init;
 
 import junit.framework.TestCase;
