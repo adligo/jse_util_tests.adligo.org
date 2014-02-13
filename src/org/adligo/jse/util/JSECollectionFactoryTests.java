@@ -23,7 +23,7 @@ public class JSECollectionFactoryTests extends TestCase {
 			ex = x;
 		}
 		assertNotNull(ex);
-		assertEquals("org.adligo.i.util.client.CollectionFactory has already been initalized.", 
+		assertEquals("org.adligo.i.util.shared.CollectionFactory has already been initalized.", 
 				ex.getMessage());
 		
 		I_Collection collection = CollectionFactory.create();

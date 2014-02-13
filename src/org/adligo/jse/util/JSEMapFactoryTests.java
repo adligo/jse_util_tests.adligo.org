@@ -22,7 +22,7 @@ public class JSEMapFactoryTests extends TestCase {
 			ex = e;
 		}
 		assertNotNull(ex);
-		assertEquals("org.adligo.i.util.client.MapFactory has already been initalized.", ex.getMessage());
+		assertEquals("org.adligo.i.util.shared.MapFactory has already been initalized.", ex.getMessage());
 		
 		I_Map map = MapFactory.create();
 		assertNotNull(map);

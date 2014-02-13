@@ -92,7 +92,7 @@ public class JSEPropertyFactoryTests extends TestCase {
 		
 		assertEquals("INFO", map.get("defaultlog"));
 		assertEquals("DEBUG", map.get("org.adligo.jse.util.TestLogLevels"));
-		assertEquals("WARN", map.get("org.adligo.i.util.client.Event"));
+		assertEquals("WARN", map.get("org.adligo.i.util.shared.Event"));
 		
 		//from classpath
 		result = null;
@@ -111,6 +111,6 @@ public class JSEPropertyFactoryTests extends TestCase {
 		
 		assertEquals("INFO", map.get("defaultlog"));
 		assertEquals("DEBUG", map.get("org.adligo.jse.util.TestLogLevels"));
-		assertEquals("WARN", map.get("org.adligo.i.util.client.Event"));
+		assertEquals("WARN", map.get("org.adligo.i.util.shared.Event"));
 	}
 }
