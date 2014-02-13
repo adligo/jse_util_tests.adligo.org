@@ -1,24 +1,24 @@
-package org.adligo.jse.util;
+package org.adligo.jse.util_tests;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import junit.framework.TestCase;
+
 import org.adligo.i.util.shared.CollectionFactory;
 import org.adligo.i.util.shared.I_Collection;
 import org.adligo.i.util_tests.mocks.MockCollectionFactory;
-import org.adligo.jse.util.JSECollectionFactory;
-
-import junit.framework.TestCase;
+import org.adligo.jse.util_tests.mock.DelegatingJSECollectionFactory;
 
 public class JSECollectionFactoryTests extends TestCase {
 
 	public void testInit() throws Exception {
 		MockCollectionFactory.uninit();
-		JSECollectionFactory.init();
+		DelegatingJSECollectionFactory.init();
 		
 		Exception ex = null;
 		try {
-			JSECollectionFactory.init();
+			DelegatingJSECollectionFactory.init();
 		} catch (Exception x) {
 			ex = x;
 		}

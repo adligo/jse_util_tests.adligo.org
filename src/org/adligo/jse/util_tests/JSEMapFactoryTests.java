@@ -1,23 +1,23 @@
-package org.adligo.jse.util;
+package org.adligo.jse.util_tests;
+
+import junit.framework.TestCase;
 
 import org.adligo.i.util.shared.I_ImmutableMap;
 import org.adligo.i.util.shared.I_Map;
 import org.adligo.i.util.shared.MapFactory;
 import org.adligo.i.util_tests.mocks.MockMapFactory;
-import org.adligo.jse.util.JSEMapFactory;
-
-import junit.framework.TestCase;
+import org.adligo.jse.util_tests.mock.DelegatingJSEMapFactory;
 
 public class JSEMapFactoryTests extends TestCase {
 
 	public void testInit() throws Exception {
 		MockMapFactory.unInit();
 		
-		JSEMapFactory.init();
+		DelegatingJSEMapFactory.init();
 		
 		Exception ex = null;
 		try {
-			JSEMapFactory.init();
+			DelegatingJSEMapFactory.init();
 		} catch (Exception e) {
 			ex = e;
 		}

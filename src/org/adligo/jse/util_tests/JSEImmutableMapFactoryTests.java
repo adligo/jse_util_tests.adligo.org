@@ -1,4 +1,4 @@
-package org.adligo.jse.util;
+package org.adligo.jse.util_tests;
 
 import java.util.HashMap;
 

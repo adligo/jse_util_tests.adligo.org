@@ -1,10 +1,11 @@
-package org.adligo.jse.util;
+package org.adligo.jse.util_tests;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.net.URL;
+
+import junit.framework.TestCase;
 
 import org.adligo.i.util.shared.I_Event;
 import org.adligo.i.util.shared.I_Listener;
@@ -13,10 +14,9 @@ import org.adligo.i.util.shared.PropertyFactory;
 import org.adligo.i.util.shared.PropertyFileReadException;
 import org.adligo.i.util_tests.mocks.MockMapFactory;
 import org.adligo.i.util_tests.mocks.MockPropertyFactory;
-import org.adligo.jse.util.JSEMapFactory;
 import org.adligo.jse.util.JSEPropertyFactory;
-
-import junit.framework.TestCase;
+import org.adligo.jse.util_tests.mock.DelegatingJSEPropertyFactory;
+import org.adligo.jse.util_tests.mock.DelegatingJSEMapFactory;
 
 public class JSEPropertyFactoryTests extends TestCase {
 	I_Event result;
@@ -25,12 +25,12 @@ public class JSEPropertyFactoryTests extends TestCase {
 		MockPropertyFactory.uninit();
 		MockMapFactory.unInit();
 		
-		JSEMapFactory.init();
-		JSEPropertyFactory.init();
+		DelegatingJSEMapFactory.init();
+		DelegatingJSEPropertyFactory.init();
 		
 		Exception ex = null;
 		try {
-			JSEPropertyFactory.init();
+			DelegatingJSEPropertyFactory.init();
 		} catch (Exception x) {
 			ex = x;
 		}
@@ -91,7 +91,7 @@ public class JSEPropertyFactoryTests extends TestCase {
 		assertEquals(3, map.size());
 		
 		assertEquals("INFO", map.get("defaultlog"));
-		assertEquals("DEBUG", map.get("org.adligo.jse.util.TestLogLevels"));
+		assertEquals("DEBUG", map.get("org.adligo.jse.util_tests.TestLogLevels"));
 		assertEquals("WARN", map.get("org.adligo.i.util.shared.Event"));
 		
 		//from classpath
@@ -110,7 +110,7 @@ public class JSEPropertyFactoryTests extends TestCase {
 		assertEquals(3, map.size());
 		
 		assertEquals("INFO", map.get("defaultlog"));
-		assertEquals("DEBUG", map.get("org.adligo.jse.util.TestLogLevels"));
+		assertEquals("DEBUG", map.get("org.adligo.jse.util_tests.TestLogLevels"));
 		assertEquals("WARN", map.get("org.adligo.i.util.shared.Event"));
 	}
 }

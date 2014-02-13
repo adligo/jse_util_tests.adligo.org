@@ -1,4 +1,4 @@
-package org.adligo.jse.util.init;
+package org.adligo.jse.util_tests.init;
 
 import org.adligo.i.log.shared.LogPlatform;
 import org.adligo.jse.util.JSEPlatform;

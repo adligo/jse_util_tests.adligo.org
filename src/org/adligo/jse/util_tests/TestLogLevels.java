@@ -1,10 +1,10 @@
-package org.adligo.jse.util;
+package org.adligo.jse.util_tests;
 
 import org.adligo.i.log.shared.Log;
 import org.adligo.i.log.shared.LogFactory;
 import org.adligo.i.log.shared.SimpleLog;
 import org.adligo.i.util.shared.Event;
-import org.adligo.jse.util.init.Init;
+import org.adligo.jse.util_tests.init.Init;
 
 import junit.framework.TestCase;
 

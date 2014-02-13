@@ -1,25 +1,25 @@
-package org.adligo.jse.util;
+package org.adligo.jse.util_tests;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import junit.framework.TestCase;
+
 import org.adligo.i.util.shared.I_Iterator;
 import org.adligo.i.util.shared.IteratorFactory;
 import org.adligo.i.util_tests.mocks.MockIteratorFactory;
-import org.adligo.jse.util.JSEIteratorFactory;
-
-import junit.framework.TestCase;
+import org.adligo.jse.util_tests.mock.DelegatingJSEIteratorFactory;
 
 public class JSEIteratorFactoryTests extends TestCase {
 
 	public void testInit() throws Exception {
 		MockIteratorFactory.uninit();
 		
-		JSEIteratorFactory.init();
+		DelegatingJSEIteratorFactory.init();
 		
 		Exception ex = null;
 		try {
-			JSEIteratorFactory.init();
+			DelegatingJSEIteratorFactory.init();
 		} catch (Exception x) {
 			ex = x;
 		}
