@@ -26,7 +26,7 @@ public class JSEImmutableMapFactoryTests extends TestCase {
 			ex = e;
 		}
 		assertNotNull(ex);
-		assertEquals("java.util.HashMap cannot be cast to org.adligo.i.util.shared.I_Map", ex.getMessage());
+		assertEquals("java.util.HashMap cannot be cast to org.adligo.i.util.client.I_Map", ex.getMessage());
 		
 		map = (I_ImmutableMap) factory.createNew(new MapWrapper(inMap));
 		assertEquals("{key=value}", map.toString());
