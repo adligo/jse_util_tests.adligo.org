@@ -1,14 +1,14 @@
 package org.adligo.jse.util_tests;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import junit.framework.TestCase;
 
 import org.adligo.i.util.shared.I_Iterator;
 import org.adligo.i.util.shared.IteratorFactory;
-import org.adligo.i.util_tests.mocks.MockIteratorFactory;
+import org.adligo.i.util_tests.shared.mocks.MockIteratorFactory;
 import org.adligo.jse.util_tests.mock.DelegatingJSEIteratorFactory;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class JSEIteratorFactoryTests extends TestCase {
 

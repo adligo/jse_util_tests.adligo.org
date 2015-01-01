@@ -5,7 +5,7 @@ import junit.framework.TestCase;
 import org.adligo.i.util.shared.I_ImmutableMap;
 import org.adligo.i.util.shared.I_Map;
 import org.adligo.i.util.shared.MapFactory;
-import org.adligo.i.util_tests.mocks.MockMapFactory;
+import org.adligo.i.util_tests.shared.mocks.MockMapFactory;
 import org.adligo.jse.util_tests.mock.DelegatingJSEMapFactory;
 
 public class JSEMapFactoryTests extends TestCase {

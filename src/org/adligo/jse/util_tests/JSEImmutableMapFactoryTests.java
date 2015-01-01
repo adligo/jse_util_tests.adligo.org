@@ -1,12 +1,12 @@
 package org.adligo.jse.util_tests;
 
-import java.util.HashMap;
+import junit.framework.TestCase;
 
 import org.adligo.i.util.shared.I_ImmutableMap;
 import org.adligo.jse.util.JSEImmutableMapFactory;
 import org.adligo.jse.util.MapWrapper;
 
-import junit.framework.TestCase;
+import java.util.HashMap;
 
 public class JSEImmutableMapFactoryTests extends TestCase {
 

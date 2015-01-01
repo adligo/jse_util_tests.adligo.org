@@ -1,10 +1,5 @@
 package org.adligo.jse.util_tests;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-
 import junit.framework.TestCase;
 
 import org.adligo.i.util.shared.I_Event;
@@ -12,11 +7,16 @@ import org.adligo.i.util.shared.I_Listener;
 import org.adligo.i.util.shared.I_Map;
 import org.adligo.i.util.shared.PropertyFactory;
 import org.adligo.i.util.shared.PropertyFileReadException;
-import org.adligo.i.util_tests.mocks.MockMapFactory;
-import org.adligo.i.util_tests.mocks.MockPropertyFactory;
+import org.adligo.i.util_tests.shared.mocks.MockMapFactory;
+import org.adligo.i.util_tests.shared.mocks.MockPropertyFactory;
 import org.adligo.jse.util.JSEPropertyFactory;
-import org.adligo.jse.util_tests.mock.DelegatingJSEPropertyFactory;
 import org.adligo.jse.util_tests.mock.DelegatingJSEMapFactory;
+import org.adligo.jse.util_tests.mock.DelegatingJSEPropertyFactory;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 public class JSEPropertyFactoryTests extends TestCase {
 	I_Event result;

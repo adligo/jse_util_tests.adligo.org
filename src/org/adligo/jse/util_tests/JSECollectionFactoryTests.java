@@ -1,14 +1,14 @@
 package org.adligo.jse.util_tests;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-
 import junit.framework.TestCase;
 
 import org.adligo.i.util.shared.CollectionFactory;
 import org.adligo.i.util.shared.I_Collection;
-import org.adligo.i.util_tests.mocks.MockCollectionFactory;
+import org.adligo.i.util_tests.shared.mocks.MockCollectionFactory;
 import org.adligo.jse.util_tests.mock.DelegatingJSECollectionFactory;
+
+import java.util.ArrayList;
+import java.util.HashSet;
 
 public class JSECollectionFactoryTests extends TestCase {
 
