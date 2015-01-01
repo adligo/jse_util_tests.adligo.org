@@ -1,5 +1,6 @@
 classes_e/
 bin/
+/build/
 classes/
 test_failure.properties
 test_results/
