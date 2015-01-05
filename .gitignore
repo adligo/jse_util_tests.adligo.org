@@ -1,10 +1,10 @@
-classes_e/
-bin/
+/bin/
 /build/
-classes/
+/classes/
+/classes_e/
 test_failure.properties
-test_results/
-test_reports/
+/test_results/
+/test_reports/
 test_foo.properties
 jse_util_test.jar
 
